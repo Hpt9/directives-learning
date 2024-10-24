@@ -4,4 +4,14 @@
   <hr />
 
   <app-auth />
+
+
+  <!-- @if(isAdmin()){
+    <p>Admin Content</p>
+  } -->
+    <!-- <ng-template appAuth="admin"> -->
+      <p *appAuth="'admin'" class="protected-content admin">Admin Content</p>
+      <p *appAuth="'user'" class="protected-content unauthenticated">Users Content</p>
+      <p *appAuth="'guest'" class="protected-content authenticated">Guest Content</p>
+    <!-- </ng-template> -->
 </main>
